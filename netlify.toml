@@ -1,0 +1,8 @@
+# https://www.netlify.com/docs/netlify-toml-reference/
+[Settings]
+[build]
+  publish = "build/"
+  command = "npm run init; gulp all"
+
+[context.production]
+  command = "npm run init; gulp all -p"
