@@ -1,3 +1,4 @@
 /build/
 /documentation/
 /node_modules/
+/src/twig/svg/

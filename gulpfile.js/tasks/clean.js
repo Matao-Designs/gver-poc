@@ -21,12 +21,17 @@ gulp.task('clean', 'Clean up files created from other tasks. Requires an option 
   if (allTheThings || yargs.argv.node || yargs.argv.n) {
     shelljs.exec('rm -rf node_modules/');
   }
+
+  if (allTheThings || yargs.argv.svg || yargs.argv.s) {
+    shelljs.exec('rm -rf src/twig/svg/');
+  }
 }, {
   options: {
     'all or -a': ' Flag to clean all of the things.',
     'build or -b': ' Flag to clean all build files.',
     'css or -c': ' Flag to clean compiled CSS files.',
     'js or -j': ' Flag to clean compiled JS files.',
-    'node or -n': ' Flag to clean node files.'
+    'node or -n': ' Flag to clean node files.',
+    'svg or -s': ' Flag to clean SVG files.'
   }
 });

@@ -32,6 +32,6 @@ gulp.task('html', 'Compile HTML.', function () {
       removeScriptTypeAttributes: removeScriptTypeAttributes,
       removeStyleLinkTypeAttributes: removeStyleLinkTypeAttributes
     }))
-    .pipe(gulp.dest('build/'))
+    .pipe(gulp.dest('build'))
     .pipe(browsersync.stream());
 });

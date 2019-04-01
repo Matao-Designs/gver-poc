@@ -28,7 +28,7 @@ gulp.task('css', 'Compile SASS into CSS.', function () {
         ]
       })
     ]))
-    .pipe(gulp.dest('build/css/'))
+    .pipe(gulp.dest('build/css'))
     .pipe(browsersync.stream());
 }, {
   options: {
