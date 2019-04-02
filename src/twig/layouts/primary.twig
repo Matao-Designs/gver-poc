@@ -1,8 +1,23 @@
 <!doctype html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en-US"><![endif]-->
 <!--[if gt IE 9]><!--><html class="no-js" lang="en-US"><!--<![endif]-->
+
+{%- set siteType = 'ql' -%}
+
+{%- if siteType == 'rm' -%}
+  {%- set siteTitle = 'Rocket Mortgage | Refinance Or Apply For A Mortgage Online' -%}
+  {%- set hdrPropLink = 'https://www.quickenloans.com' -%}
+  {%- set hdrPropLinkText = 'Quicken Loans' -%}
+
+{%- else -%}
+  {%- set siteTitle = 'Quicken Loans | America\'s Largest Mortgage Lender' -%}
+  {%- set hdrPropLink = 'https://www.rocketmortgage.com' -%}
+  {%- set hdrPropLinkText = 'Rocket Mortgage' -%}
+
+{%- endif -%}
+
 <head>
-  <title>Page Title</title>
+  <title>{{ siteTitle }}</title>
   <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, width=device-width">
   <link href="./css/app.css" rel="stylesheet" />
   <script src="./js/head.js"></script>
