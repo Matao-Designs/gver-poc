@@ -1,6 +1,7 @@
 var
   gulp = require('gulp'),
-  shelljs = require('shelljs');
+  shelljs = require('shelljs'),
+  yargs = require('yargs');
 
 shelljs.config.fatal = true;
 
@@ -10,6 +11,7 @@ gulp.task(
   'Execute certain tasks on file save, then immediately reload all browsers serving the project.',
   ['all'], function () {
   browsersync.init({
+    open: !(yargs.argv.dontopen || yargs.argv.d),
     server: {
       baseDir: 'build'
     }
@@ -19,6 +21,10 @@ gulp.task(
     gulp.watch('src/svg/**/*.svg', ['svg']);
     gulp.watch('src/twig/**/*.twig', ['html']);
   });
+}, {
+  options: {
+    'dontopen or -d': 'Tells browser-sync you don\'t want to open automatically.'
+  }
 }, {
   aliases: ['watch']
 });
