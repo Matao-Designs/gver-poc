@@ -1,9 +1,8 @@
 [Deploy this repo to Netlify (as Fork)](https://app.netlify.com/start/deploy?repository=https://github.com/erikwoods-netlify-sites/poc)
 
-# High Priority TODO:
+# TODO for POC
 
 * CMS integration
-  * JSON -> gulp data -> cheerio -> HTML
   * How do changes get deployed? (Nonprod and Prod)
 * Forms/Submission
 * QLS
@@ -11,8 +10,10 @@
 * LTC
 * Wham
 
-# Low Priority TODO:
+# TODO
 
+* CMS integration
+  * Can we have it programatically fetch json data based on page name or something? that'd be dope af.
 * Allow for better paths to be used when calling SVGs from templates. Right now they're relative.
   * Will this mean moving away from twig? Should I even be using twig anyways? Probably not.
 * Determine the best way to make sure that SVGs are compiled before the HTML is compiled.

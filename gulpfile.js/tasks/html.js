@@ -1,4 +1,5 @@
 var
+  fs = require('fs'),
   gulp = require('gulp'),
   htmlmin = require('gulp-htmlmin'),
   twig = require('gulp-twig'),
@@ -11,7 +12,10 @@ gulp.task('html', 'Compile HTML.', function () {
     removeComments =
     removeRedundantAttributes =
     removeScriptTypeAttributes =
-    removeStyleLinkTypeAttributes = false;
+    removeStyleLinkTypeAttributes = false,
+    mockPayload = JSON.parse(fs.readFileSync('./src/json/mock-cms-payload.json')),
+    mockPayload = mockPayload.elements,
+    cmsData = cmsTitle = cmsShortDescription = {};
 
   if (yargs.argv.prod || yargs.argv.p) {
     collapseWhitespace =
@@ -22,8 +26,24 @@ gulp.task('html', 'Compile HTML.', function () {
     removeStyleLinkTypeAttributes = true;
   }
 
+  for (var obj in mockPayload) {
+    var thisObj = mockPayload[obj]
+
+    if (thisObj.hasOwnProperty('name') && thisObj.name === 'Title') {
+      cmsTitle = {'title': thisObj};
+    }
+
+    if (thisObj.hasOwnProperty('name') && thisObj.name === 'ShortDescription') {
+      cmsShortDescription = {'shortDescription': thisObj};
+    }
+  }
+
+  cmsData = {'cms': Object.assign(cmsTitle, cmsShortDescription)};
+
   gulp.src('src/twig/pages/**/*.twig')
-    .pipe(twig())
+    .pipe(twig({
+      data: cmsData
+    }))
     .pipe(htmlmin({
       collapseWhitespace: collapseWhitespace,
       processConditionalComments: processConditionalComments,
