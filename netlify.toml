@@ -2,7 +2,7 @@
 [Settings]
 [build]
   publish = "build/"
-  command = "npm run init; gulp svg; gulp all"
+  command = "npm run init; gulp all"
 
 [context.production]
-  command = "npm run init; gulp svg; gulp all -p"
+  command = "npm run init; gulp all -p"

@@ -13,6 +13,7 @@ gulp.task('html', 'Compile HTML.', function () {
     removeRedundantAttributes =
     removeScriptTypeAttributes =
     removeStyleLinkTypeAttributes = false,
+
     mockPayload = JSON.parse(fs.readFileSync('./src/json/mock-cms-payload.json')),
     mockPayload = mockPayload.elements,
     cmsData = cmsTitle = cmsShortDescription = {};
@@ -27,7 +28,7 @@ gulp.task('html', 'Compile HTML.', function () {
   }
 
   for (var obj in mockPayload) {
-    var thisObj = mockPayload[obj]
+    var thisObj = mockPayload[obj];
 
     if (thisObj.hasOwnProperty('name') && thisObj.name === 'Title') {
       cmsTitle = {'title': thisObj};

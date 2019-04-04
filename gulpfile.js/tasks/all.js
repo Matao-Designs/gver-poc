@@ -5,9 +5,9 @@ var
 
 gulp.task('all', 'Compile the entire project.', function () {
   if (yargs.argv.prod || yargs.argv.p) {
-    shelljs.exec('gulp css js svg html -p');
+    shelljs.exec('gulp svg; gulp css js html -p');
   } else {
-    shelljs.exec('gulp css js svg html');
+    shelljs.exec('gulp svg; gulp css js html');
   }
 }, {
   options: {

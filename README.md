@@ -27,3 +27,6 @@
 * Improve the experience of initializing a new Tostii site by giving it a GUI and additional features.
   * Configurable options
   * Different types of starting points for different types of sites
+* When `gulp dev` notices a change for html, it builds all files. Do I really need that? That could become a problem with larger sites.
+  * Figure out if I truly need it to do this -- this may change, if I move away from twig.
+  * If I don't need it, it would be a nice to have. Until it becomes a huge problem. But it may only really slow down the dev process, not the deploy process.
