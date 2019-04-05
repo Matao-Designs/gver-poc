@@ -2,17 +2,19 @@
 
 # TODO for POC
 
-* CMS integration
-  * How do changes get deployed? (Nonprod and Prod)
 * Forms/Submission
 * QLS
+  * It must persist.
 * Metrics/Analytics
+  * We should determine the minimum required, in the name of speed and simplification.
 * LTC
-* Wham
+  * Is this just part of the metrics story?
 
 # TODO
 
 * CMS integration
+  * How do changes get deployed to Nonprod/Prod? It shouldn't be too hard - just need to trigger a deploy.
+    * I just saw something about incoming webhooks at https://www.netlify.com/docs/continuous-deployment/#build-environment-variables
   * Can we have it programatically fetch json data based on page name or something? that'd be dope af.
 * Allow for better paths to be used when calling SVGs from templates. Right now they're relative.
   * Will this mean moving away from twig? Should I even be using twig anyways? Probably not.
