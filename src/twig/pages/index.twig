@@ -1,5 +1,72 @@
 {% extends "../layouts/primary.twig" %}
 
 {% block page %}
-Page Body
+<div class="sprk-c-HighlightBoard sprk-o-Box sprk-u-mbm">
+  <div class="sprk-c-HighlightBoard__content sprk-o-Stack sprk-o-Stack--large">
+    <h1 class="sprk-b-TypeDisplayTwo sprk-c-HighlightBoard__heading sprk-o-Stack__item">
+      Providing Affordable Mortgages and Award-Winning Client Service for More than 30 Years
+    </h1>
+  </div>
+</div>
+
+<form action="/thanks" class="sprk-o-Box--large" data-netlify method="post" name="leadform">
+  {{ field.radioGroup('What type of loan are you looking for?',
+    'LoanPurpose',
+    [
+      {'label': 'Home Refinance'},
+      {'label': 'Home Purchase'},
+      {'label': 'Cash-Out Refinance'}
+    ]
+  ) }}
+  {{ field.radioGroup('What type of home are you looking for?',
+    'HomeDescription',
+    [
+      {'label': 'Single Family'},
+      {'label': 'Multi-Family'},
+      {'label': 'Condominium'},
+      {'label': 'Townhouse'},
+    ]
+  ) }}
+  {{ field.radioGroup('What will the property be used for?',
+    'PropertyUse',
+    [
+      {'label': 'Primary Residence'},
+      {'label': 'Secondary Home'},
+      {'label': 'Investment Property'},
+    ]
+  ) }}
+  {{ field.radioGroup('When do you plan to purchase your home?',
+    'LoanPurposePurchase',
+    [
+      {'label': 'Immediately: Signed a Purchase Agreement'},
+      {'label': 'ASAP: Found a House/Offer Pending'},
+      {'label': 'Within 30 Days'},
+      {'label': '2 - 3 Months'},
+      {'label': '3 - 6 Months'},
+      {'label': '6+ Months'},
+      {'label': 'No Time Frame; I am Researching Options'},
+    ]
+  ) }}
+  {{ field.radioGroup('Are you a first-time home buyer?',
+    'FirstTimeBuyer',
+    [
+      {'label': 'Yes'},
+      {'label': 'No'},
+    ]
+  ) }}
+  {{ field.radioGroup('Are you an active or previously active U.S. military veteran?',
+    'Military_Purch',
+    [
+      {'label': 'Yes'},
+      {'label': 'No'},
+    ]
+  ) }}
+  {{ field.radioGroup('Are you currently working with a real estate agent?',
+    'HasRealEstateAgent',
+    [
+      {'label': 'Yes'},
+      {'label': 'No'},
+    ]
+  ) }}
+</form>
 {% endblock page %}

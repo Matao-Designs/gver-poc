@@ -1,0 +1,24 @@
+{% macro radioGroup(fieldsetLabel, name, items) %}
+  <div class="sprk-b-InputContainer">
+    <fieldset class="sprk-b-Fieldset">
+      <legend class="sprk-b-Legend">
+        <label class="sprk-b-Label">{{ fieldsetLabel|default('Radio Group Label') }}</label>
+      </legend>
+
+      {% for key, item in items %}
+        <div class="sprk-b-SelectionContainer">
+          <input aria-describedby="radio-normal--error-container" data-id="radio-normal-{{ loop.index }}" id="radio-normal-{{ loop.index }}" name="{{ name }}" type="radio">
+          <label class="sprk-b-Label sprk-b-Label--inline" for="radio-normal-{{ loop.index }}">{{ item.label|default('Radio Item') }}</label>
+        </div>
+      {% endfor %}
+    </fieldset>
+    <!-- <div class="sprk-b-ErrorContainer" id="radio-error--error-container">
+      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 64 64">
+        <use xlink:href="#exclamation-filled-small" />
+      </svg>
+      <div class="sprk-b-ErrorText">
+        There is an error on this field.
+      </div>
+    </div> -->
+  </div>
+{% endmacro %}

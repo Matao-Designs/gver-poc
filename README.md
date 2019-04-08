@@ -3,6 +3,27 @@
 # TODO for POC
 
 * Forms/Submission
+  * Purchase Flow:
+    * LoanPurpose
+    * HomeDescription
+    * PropertyUse
+    * LoanPurposePurchase
+    * FirstTimeBuyer
+    * Military_Purch
+    * HasRealEstateAgent
+    * PurchasePrice : number
+    * DownPayment : number
+    * CreditRating
+    * LatePayments
+    * Foreclosure
+    * Bankruptcy
+    * FirstName : text
+    * LastName : text
+    * HomePhone : text
+    * Email : email
+    * MailingAddress : text
+    * Zipcode
+* styling that shit
 * QLS
   * It must persist.
 * Metrics/Analytics
@@ -26,7 +47,7 @@
 * {% if siteType == "rm" %} (Rocket Mortgage), the Spark font stack should be used. Else, it should be the old font stack.
 * Set up the real JDP image assets (and the assets for 100 best places, bbb, and EHO).
 * Add "We Want Your Feedback" link to footer(?)
-* Improve the experience of initializing a new Tostii site by giving it a GUI and additional features.
+* Improve the experience of initializing a new Grover site by giving it a GUI and additional features.
   * Configurable options
   * Different types of starting points for different types of sites
 * When `gulp dev` notices a change for html, it builds all files. Do I really need that? That could become a problem with larger sites.
