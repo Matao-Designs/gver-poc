@@ -3,8 +3,6 @@
 # TODO for POC
 
 * Forms/Submission
-  * twig macro for buttons
-  * add submit button
   * test submission
   * serialize form input, format to match LOS mock data
   * styling that shit
@@ -12,6 +10,7 @@
   * It must persist.
 * Metrics/Analytics
   * We should determine the minimum required, in the name of speed and simplification.
+  * Determine if we need to keep the data-id attributes - they may be useful for automation scripts, as suggested by Spark.
 * LTC
   * Is this just part of the metrics story?
 
@@ -35,6 +34,7 @@
 * Set up the real JDP image assets (and the assets for 100 best places, bbb, and EHO).
 * Add "We Want Your Feedback" link to footer(?)
 * Implement more macros for more Spark patterns (or other patterns).
+* Adjust current macros so that they can also be called/created with a disabled option.
 * Improve the experience of initializing a new Grover site by giving it a GUI and additional features.
   * Configurable options
   * Different types of starting points for different types of sites
