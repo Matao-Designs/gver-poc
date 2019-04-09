@@ -3,27 +3,11 @@
 # TODO for POC
 
 * Forms/Submission
-  * Purchase Flow:
-    * LoanPurpose
-    * HomeDescription
-    * PropertyUse
-    * LoanPurposePurchase
-    * FirstTimeBuyer
-    * Military_Purch
-    * HasRealEstateAgent
-    * PurchasePrice : number
-    * DownPayment : number
-    * CreditRating
-    * LatePayments
-    * Foreclosure
-    * Bankruptcy
-    * FirstName : text
-    * LastName : text
-    * HomePhone : text
-    * Email : email
-    * MailingAddress : text
-    * Zipcode
-* styling that shit
+  * twig macro for buttons
+  * add submit button
+  * test submission
+  * serialize form input, format to match LOS mock data
+  * styling that shit
 * QLS
   * It must persist.
 * Metrics/Analytics
@@ -33,6 +17,9 @@
 
 # TODO
 
+* Forms/Submission
+  * Validation may be lacking a bit, still.
+  * phone number may need to have formatting stripped before submission
 * CMS integration
   * How do changes get deployed to Nonprod/Prod? It shouldn't be too hard - just need to trigger a deploy.
     * I just saw something about incoming webhooks at https://www.netlify.com/docs/continuous-deployment/#build-environment-variables
@@ -47,6 +34,7 @@
 * {% if siteType == "rm" %} (Rocket Mortgage), the Spark font stack should be used. Else, it should be the old font stack.
 * Set up the real JDP image assets (and the assets for 100 best places, bbb, and EHO).
 * Add "We Want Your Feedback" link to footer(?)
+* Implement more macros for more Spark patterns (or other patterns).
 * Improve the experience of initializing a new Grover site by giving it a GUI and additional features.
   * Configurable options
   * Different types of starting points for different types of sites

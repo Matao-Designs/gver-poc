@@ -10,63 +10,24 @@
 </div>
 
 <form action="/thanks" class="sprk-o-Box--large" data-netlify method="post" name="leadform">
-  {{ field.radioGroup('What type of loan are you looking for?',
-    'LoanPurpose',
-    [
-      {'label': 'Home Refinance'},
-      {'label': 'Home Purchase'},
-      {'label': 'Cash-Out Refinance'}
-    ]
-  ) }}
-  {{ field.radioGroup('What type of home are you looking for?',
-    'HomeDescription',
-    [
-      {'label': 'Single Family'},
-      {'label': 'Multi-Family'},
-      {'label': 'Condominium'},
-      {'label': 'Townhouse'},
-    ]
-  ) }}
-  {{ field.radioGroup('What will the property be used for?',
-    'PropertyUse',
-    [
-      {'label': 'Primary Residence'},
-      {'label': 'Secondary Home'},
-      {'label': 'Investment Property'},
-    ]
-  ) }}
-  {{ field.radioGroup('When do you plan to purchase your home?',
-    'LoanPurposePurchase',
-    [
-      {'label': 'Immediately: Signed a Purchase Agreement'},
-      {'label': 'ASAP: Found a House/Offer Pending'},
-      {'label': 'Within 30 Days'},
-      {'label': '2 - 3 Months'},
-      {'label': '3 - 6 Months'},
-      {'label': '6+ Months'},
-      {'label': 'No Time Frame; I am Researching Options'},
-    ]
-  ) }}
-  {{ field.radioGroup('Are you a first-time home buyer?',
-    'FirstTimeBuyer',
-    [
-      {'label': 'Yes'},
-      {'label': 'No'},
-    ]
-  ) }}
-  {{ field.radioGroup('Are you an active or previously active U.S. military veteran?',
-    'Military_Purch',
-    [
-      {'label': 'Yes'},
-      {'label': 'No'},
-    ]
-  ) }}
-  {{ field.radioGroup('Are you currently working with a real estate agent?',
-    'HasRealEstateAgent',
-    [
-      {'label': 'Yes'},
-      {'label': 'No'},
-    ]
-  ) }}
+  {% include './partials/leadform.LoanPurpose.twig' %}
+  {% include './partials/leadform.HomeDescription.twig' %}
+  {% include './partials/leadform.PropertyUse.twig' %}
+  {% include './partials/leadform.LoanPurposePurchase.twig' %}
+  {% include './partials/leadform.FirstTimeBuyer.twig' %}
+  {% include './partials/leadform.Military_Purch.twig' %}
+  {% include './partials/leadform.HasRealEstateAgent.twig' %}
+  {% include './partials/leadform.PurchasePrice.twig' %}
+  {% include './partials/leadform.DownPayment.twig' %}
+  {% include './partials/leadform.CreditRating.twig' %}
+  {% include './partials/leadform.LatePayments.twig' %}
+  {% include './partials/leadform.Foreclosure.twig' %}
+  {% include './partials/leadform.Bankruptcy.twig' %}
+  {% include './partials/leadform.FirstName.twig' %}
+  {% include './partials/leadform.LastName.twig' %}
+  {% include './partials/leadform.HomePhone.twig' %}
+  {% include './partials/leadform.Email.twig' %}
+  {% include './partials/leadform.MailingAddress.twig' %}
+  {% include './partials/leadform.Zipcode.twig' %}
 </form>
 {% endblock page %}
