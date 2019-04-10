@@ -10,7 +10,7 @@
 </div>
 
 {% set formName = 'leadform' %}
-<form action="/thanks" class="sprk-o-Box--large" data-netlify method="post" name="{{ formName }}">
+<form action="/thanks" class="sprk-o-Box--large" data-netlify method="post" name="{{ formName }}" novalidate>
   {% include './partials/leadform.LoanPurpose.twig' %}
   {% include './partials/leadform.HomeDescription.twig' %}
   {% include './partials/leadform.PropertyUse.twig' %}
@@ -31,6 +31,6 @@
   {% include './partials/leadform.MailingAddress.twig' %}
   {% include './partials/leadform.Zipcode.twig' %}
 
-  {{ action.button('Click to See Your Results!', formName, 'submit', 'full@xs') }}
+  {{ button.primary('Click to See Your Results!', formName, 'submit', 'full@xs') }}
 </form>
 {% endblock page %}

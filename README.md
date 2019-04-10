@@ -79,7 +79,7 @@
     * This is especially a problem when first setting up a Grover site locally (or when deploying). It needs to work smarter.
     * The temporary solution is to run `gulp svg` before the other gulp commands. I hate this. :(
 * Macros
-  * edit: action.button - Needs "disabled" attribute as param (maybe actually just a param for any attributes?)
+  * edit: button.* - Needs "disabled" attribute as param (maybe actually just a param for any attributes?)
   * new: masthead.*
   * new: hboard.*
   * new: asset.image?

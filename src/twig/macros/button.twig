@@ -1,0 +1,41 @@
+{% macro primary(label, name, type = 'button', widthAtSize) %}
+  {% import _self as button %}
+  {{ button.build(label, name, type, widthAtSize, 'primary') }}
+{% endmacro %}
+
+{% macro secondary(label, name, type = 'button', widthAtSize) %}
+  {% import _self as button %}
+  {{ button.build(label, name, type, widthAtSize, 'secondary') }}
+{% endmacro %}
+
+{% macro tertiary(label, name, type = 'button', widthAtSize) %}
+  {% import _self as button %}
+  {{ button.build(label, name, type, widthAtSize, 'tertiary') }}
+{% endmacro %}
+
+{% macro build(label, name, type, widthAtSize, variant) %}
+  {% set dataId, btnAttrs = '' %}
+  {% set btnClass = 'sprk-c-Button' %}
+
+  {% if type == 'submit' and variant == 'primary' %}
+    {% set btnAttrs = btnAttrs ~ 'data-sprk-spinner="click" ' %}
+  {% endif %}
+
+  {% if type == 'button' %}
+    {% set dataId = dataId ~ type ~ '-' ~ name %}
+  {% else %}
+    {% set dataId = dataId ~ 'button-' ~ type ~ '-' ~ name %}
+  {% endif %}
+
+  {% if variant != 'primary' %}
+    {% set btnClass = btnClass ~ ' sprk-c-Button--' ~ variant %}
+  {% endif %}
+
+  {% if widthAtSize %}
+    {% set btnClass = btnClass ~ ' sprk-c-Button--' ~ widthAtSize %}
+  {% endif %}
+
+  <button class="{{ btnClass }}" data-id="{{ dataId }}" type="{{ type }}" {{ btnAttrs }}>
+    {{ label }}
+  </button>
+{% endmacro %}
