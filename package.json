@@ -13,6 +13,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-svgmin": "^2.1.0",
     "gulp-twig": "^1.2.0",
+    "jquery": "^2.2.4",
     "require-dir": "^1.2.0",
     "shelljs": "^0.8.3",
     "webpack": "^4.29.0",

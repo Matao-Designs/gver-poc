@@ -2,24 +2,13 @@
 
 [Deploy this repo to Netlify (as Fork)](https://app.netlify.com/start/deploy?repository=https://github.com/erikwoods-netlify-sites/poc)
 
-# Questions:
-
-* Do we want to add the `We Want Your Feedback` link to the footer?
-* Should we find a way to easily distribute some of the CSS amongst all Grover sites?
-  * If so, that would likely mean taking macros and distributing them as real web components, opening up a whole new set of problems to solve (whether worthwhile or not is to be determined).
-  * That'd be some hot shit, but is it really necessary? At that point, why not have Spark distribute that stuff?
-
 # Must have for POC:
 
-* Macro for creating a lander-esque SPA-like experience (animation looks like "panels" being swiped from right to left).
-  * Parameter for creating a type of button/link that can be used on anything to self-identify as a "next" or "previous" button/link.
-  * Allow the button/link to be omitted from a panel, if certain conditions are met (will be nice for auto-advancing wham-style radio-based icon panels).
-  * It should be easy for Grover users to digest usage of this macro, so that they can "drag and drop" it.
+* LTC
+  * Is this just part of the metrics story? Figure out how this is sent downstream today (in Lander).
 * Metrics/Analytics - the full current package used by Lander today.
   * Should it be added via [Snippet Injection](https://www.netlify.com/docs/inject-analytics-snippets/)?
     * If so, I'll need to set up or utilize an existing environment variable to keep prod scripts separate from nonprod scripts.
-* LTC
-  * Is this just part of the metrics story? Figure out how this is sent downstream today (in Lander).
 * QLS
   * Recognize parameter and change cms mock data?
 * Introduce a `wham`-inspired flavor (CSS, breh).
@@ -34,6 +23,13 @@
   * Make sure that it works locally.
     * This may mean defining a [build environment variable](https://www.netlify.com/docs/continuous-deployment/#build-environment-variables), but...
     * It could possibly involve a custom [Netlify form submission](https://www.netlify.com/docs/form-handling/#ajax-form-submissions).
+
+# Questions:
+
+* Do we want to add the `We Want Your Feedback` link to the footer?
+* Should we find a way to easily distribute some of the CSS amongst all Grover sites?
+  * If so, that would likely mean taking macros and distributing them as real web components, opening up a whole new set of problems to solve (whether worthwhile or not is to be determined).
+  * That'd be some hot shit, but is it really necessary? At that point, why not have Spark distribute that stuff?
 
 # Must have for first live date:
 
@@ -55,18 +51,22 @@
   * It must exist, and persist!
   * Could impact the fetching of json data from the CMS. Somehow. I think? May need to discuss with external TMs.
 * Macros
-  * new: link.base
-  * new: link.simple
-  * new: link.icon
-  * new: link.lockup - Will this work with existing customizations to the masthead (the logo/link lockup-style nav stuff)?
+  * new: link.* (from Spark)
+  * new: link.lockup
     * This is for the special Lander header links (Phone, Chat, FOC link)
-      * Need to be styled lockups with icons (refer to /l/progpi).
-      * Need to integrate with invoca and live person. (Right now, it's hard-coded garbage.)
-  * new: masthead.grover - To accommodate for existing customizations to the masthead (the logo/link lockup-style nav).
+      * Will it work with existing customizations to the masthead?
+      * Needs to be styled lockups with icons (refer to /l/progpi).
+      * Needs to integrate with invoca and live person. (Right now, it's hard-coded garbage.)
+  * new: masthead.gver
+    * To accommodate for existing customizations to the masthead.
     * It should use the other new macros where appropriate. Nested macros ftw! I hope.
-  * new: footer.grover - To accommodate for existing customizations to the footer (hides the big bulky links section that we typically don't need on an LP).
+  * new: footer.gver - To accommodate for existing customizations to the footer (hides the big bulky links section that we typically don't need on an LP).
     * It should use the other new macros where appropriate. Nested macros ftw! I hope.
   * new: svg.base - For basic inline svg asset needs.
+  * new: gver.panels (still thinking about this as I prioritize work)
+    * Allow the next/prev buttons/links to be omitted from a panel, if certain conditions are met (will be nice for auto-advancing wham-style radio-based icon panels).
+* Grover panels
+  * It doesn't need to be jQuery - and I'm sure we'll need to have this hook in to validation. It was just a quick and dirty implementation.
 
 # Nice to have (some day):
 
