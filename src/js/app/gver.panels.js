@@ -7,7 +7,7 @@ let $gverPanelItems = $('[data-gver-panel-item]');
 let $gverPanelBtnNext = $('[data-gver-panel-btn="next"]');
 let $gverPanelBtnPrev = $('[data-gver-panel-btn="prev"]');
 
-$gverPanelItems.not(':first').addClass('sprk-u-Display--none');
+$gverPanelItems.filter(':first').removeClass('sprk-u-Display--none');
 
 $gverPanelBtnNext.on('click', function() {
   let $thisPanel = $(this).closest('[data-gver-panel-item]');

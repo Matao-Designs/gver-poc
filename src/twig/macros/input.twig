@@ -1,7 +1,7 @@
 {% macro money(label, name, helperText) %}
   <div class="sprk-b-InputContainer" data-sprk-input="monetary">
     <div class="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon">
-      <label class="sprk-b-Label sprk-b-Label--monetary" for="monetary-normal-{{ name }}">{{ label }}</label>
+      <label class="sprk-b-Label sprk-b-Label--monetary sprk-b-TypeDisplayThree" for="monetary-normal-{{ name }}">{{ label }}</label>
       <input aria-describedby="monetary-normal-{{ name }}--error-container" class="sprk-b-TextInput sprk-b-TextInput--has-text-icon sprk-u-Width-100" data-id="monetary-normal-{{ name }}" id="monetary-normal-{{ name }}" pattern="(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$" type="tel">
     </div>
     {% if helperText %}<div class="sprk-b-HelperText">{{ helperText }}</div>{% endif %}
@@ -11,7 +11,7 @@
 
 {% macro phone(label, name, helperText) %}
   <div class="sprk-b-InputContainer" data-sprk-input="phone">
-    <label class="sprk-b-Label" for="phone-input-normal-{{ name }}">{{ label }}</label>
+    <label class="sprk-b-Label sprk-b-TypeDisplayThree" for="phone-input-normal-{{ name }}">{{ label }}</label>
     <input aria-describedby="phone-input-normal-{{ name }}--error-container" class="sprk-b-TextInput sprk-u-Width-100" data-id="phone-input-normal-{{ name }}" id="phone-input-normal-{{ name }}" pattern="(^(\+\d{1,2}\s)?((\(\d{3}\))|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$)|^$" placeholder="(000) 000-0000" type="tel">
     {% if helperText %}<div class="sprk-b-HelperText">{{ helperText }}</div>{% endif %}
     <div class="sprk-b-ErrorContainer" id="phone-input-normal-{{ name }}--error-container"></div>
@@ -22,7 +22,7 @@
   <div class="sprk-b-InputContainer">
     <fieldset class="sprk-b-Fieldset">
       <legend class="sprk-b-Legend">
-        <label class="sprk-b-Label">{{ label }}</label>
+        <label class="sprk-b-Label sprk-b-TypeDisplayThree">{{ label }}</label>
       </legend>
 
       {% for option in radioOptions %}
@@ -39,7 +39,7 @@
 
 {% macro text(label, name, type = 'text', helperText) %}
   <div class="sprk-b-InputContainer">
-    <label class="sprk-b-Label" for="text-input-normal-{{ name }}">{{ label }}</label>
+    <label class="sprk-b-Label sprk-b-TypeDisplayThree" for="text-input-normal-{{ name }}">{{ label }}</label>
     <input aria-describedby="text-input-normal-{{ name }}--error-container" class="sprk-b-TextInput sprk-u-Width-100" data-id="text-input-normal-{{ name }}" id="text-input-normal-{{ name }}" type="{{ type }}">
     {% if helperText %}<div class="sprk-b-HelperText">{{ helperText }}</div>{% endif %}
     <div class="sprk-b-ErrorContainer" id="text-input-normal-{{ name }}--error-container"></div>

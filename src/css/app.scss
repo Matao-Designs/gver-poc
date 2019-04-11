@@ -1,1 +1,7 @@
 @import "node_modules/@sparkdesignsystem/spark-core/spark-core";
+
+.sprk-b-TextInputIconContainer--has-text-icon::before {
+  bottom: 1rem;
+  left: 1rem;
+  margin: 0;
+}
