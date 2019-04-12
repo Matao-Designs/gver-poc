@@ -21,14 +21,14 @@
 {% macro radio(label, name, radioOptions, helperText) %}
   <div class="sprk-b-InputContainer">
     <fieldset class="sprk-b-Fieldset">
-      <legend class="sprk-b-Legend">
+      <legend class="sprk-b-Legend sprk-u-TextAlign--center">
         <label class="sprk-b-Label sprk-b-TypeDisplayThree">{{ label }}</label>
       </legend>
 
       {% for option in radioOptions %}
         <div class="sprk-b-SelectionContainer">
           <input aria-describedby="radio-normal-{{ name }}--error-container" data-id="radio-normal-{{ name }}-{{ loop.index }}" id="radio-normal-{{ name }}-{{ loop.index }}" name="{{ name }}" type="radio">
-          <label class="sprk-b-Label sprk-b-Label--inline" for="radio-normal-{{ name }}-{{ loop.index }}">{{ option.label }}</label>
+          <label class="sprk-c-Button sprk-c-Button--secondary sprk-b-Label sprk-b-Label--inline" for="radio-normal-{{ name }}-{{ loop.index }}">{{ option.label }}</label>
         </div>
       {% endfor %}
     </fieldset>

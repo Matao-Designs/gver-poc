@@ -2,6 +2,7 @@
   "private": true,
   "dependencies": {
     "@sparkdesignsystem/spark-core": "^10.0.0",
+    "@sparkdesignsystem/spark-highlight-board": "^4.0.2",
     "autoprefixer": "^9.4.7",
     "babel-polyfill": "^6.26.0",
     "browser-sync": "^2.26.3",

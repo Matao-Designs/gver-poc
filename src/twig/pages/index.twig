@@ -1,97 +1,89 @@
 {% extends "../layouts/primary.twig" %}
 
 {% block page %}
-<div class="sprk-c-HighlightBoard sprk-o-Box sprk-u-TextAlign--center sprk-u-mbm">
-  <div class="sprk-c-HighlightBoard__content sprk-o-Stack sprk-o-Stack--large">
-    <h1 class="sprk-b-TypeDisplayTwo sprk-c-HighlightBoard__heading sprk-o-Stack__item">
-      Providing Affordable Mortgages and Award-Winning Client Service for More than 30 Years
-    </h1>
-  </div>
-</div>
-
 {% set formName = 'leadform' %}
 <form action="/thanks" class="sprk-o-Box--large sprk-u-AbsoluteCenter sprk-u-TextAlign--center" data-gver-panels data-netlify method="post" name="{{ formName }}" novalidate>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.LoanPurpose.twig' %}
     {{ button.primary('Next', formName, 'button', 'full@xs', 'data-gver-panel-btn="next"') }}
   </div>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.HomeDescription.twig' %}
     {{ button.primary('Next', formName, 'button', 'full@xs', 'data-gver-panel-btn="next"') }}
     {{ button.tertiary('Go Back', formName, 'button', 'full@xs', 'data-gver-panel-btn="prev"') }}
   </div>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.PropertyUse.twig' %}
     {{ button.primary('Next', formName, 'button', 'full@xs', 'data-gver-panel-btn="next"') }}
     {{ button.tertiary('Go Back', formName, 'button', 'full@xs', 'data-gver-panel-btn="prev"') }}
   </div>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.LoanPurposePurchase.twig' %}
     {{ button.primary('Next', formName, 'button', 'full@xs', 'data-gver-panel-btn="next"') }}
     {{ button.tertiary('Go Back', formName, 'button', 'full@xs', 'data-gver-panel-btn="prev"') }}
   </div>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.FirstTimeBuyer.twig' %}
     {{ button.primary('Next', formName, 'button', 'full@xs', 'data-gver-panel-btn="next"') }}
     {{ button.tertiary('Go Back', formName, 'button', 'full@xs', 'data-gver-panel-btn="prev"') }}
   </div>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.Military_Purch.twig' %}
     {{ button.primary('Next', formName, 'button', 'full@xs', 'data-gver-panel-btn="next"') }}
     {{ button.tertiary('Go Back', formName, 'button', 'full@xs', 'data-gver-panel-btn="prev"') }}
   </div>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.HasRealEstateAgent.twig' %}
     {{ button.primary('Next', formName, 'button', 'full@xs', 'data-gver-panel-btn="next"') }}
     {{ button.tertiary('Go Back', formName, 'button', 'full@xs', 'data-gver-panel-btn="prev"') }}
   </div>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.PurchasePrice.twig' %}
     {{ button.primary('Next', formName, 'button', 'full@xs', 'data-gver-panel-btn="next"') }}
     {{ button.tertiary('Go Back', formName, 'button', 'full@xs', 'data-gver-panel-btn="prev"') }}
   </div>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.DownPayment.twig' %}
     {{ button.primary('Next', formName, 'button', 'full@xs', 'data-gver-panel-btn="next"') }}
     {{ button.tertiary('Go Back', formName, 'button', 'full@xs', 'data-gver-panel-btn="prev"') }}
   </div>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.CreditRating.twig' %}
     {{ button.primary('Next', formName, 'button', 'full@xs', 'data-gver-panel-btn="next"') }}
     {{ button.tertiary('Go Back', formName, 'button', 'full@xs', 'data-gver-panel-btn="prev"') }}
   </div>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.LatePayments.twig' %}
     {{ button.primary('Next', formName, 'button', 'full@xs', 'data-gver-panel-btn="next"') }}
     {{ button.tertiary('Go Back', formName, 'button', 'full@xs', 'data-gver-panel-btn="prev"') }}
   </div>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.Foreclosure.twig' %}
     {{ button.primary('Next', formName, 'button', 'full@xs', 'data-gver-panel-btn="next"') }}
     {{ button.tertiary('Go Back', formName, 'button', 'full@xs', 'data-gver-panel-btn="prev"') }}
   </div>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.Bankruptcy.twig' %}
     {{ button.primary('Next', formName, 'button', 'full@xs', 'data-gver-panel-btn="next"') }}
     {{ button.tertiary('Go Back', formName, 'button', 'full@xs', 'data-gver-panel-btn="prev"') }}
   </div>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.FirstName.twig' %}
     {% include './partials/leadform.LastName.twig' %}
     {{ button.primary('Next', formName, 'button', 'full@xs', 'data-gver-panel-btn="next"') }}
     {{ button.tertiary('Go Back', formName, 'button', 'full@xs', 'data-gver-panel-btn="prev"') }}
   </div>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.HomePhone.twig' %}
     {{ button.primary('Next', formName, 'button', 'full@xs', 'data-gver-panel-btn="next"') }}
     {{ button.tertiary('Go Back', formName, 'button', 'full@xs', 'data-gver-panel-btn="prev"') }}
   </div>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.Email.twig' %}
     {{ button.primary('Next', formName, 'button', 'full@xs', 'data-gver-panel-btn="next"') }}
     {{ button.tertiary('Go Back', formName, 'button', 'full@xs', 'data-gver-panel-btn="prev"') }}
   </div>
-  <div class="sprk-o-Box sprk-u-Display--none" data-gver-panel-item>
+  <div class="sprk-o-Box sprk-u-Display--none sprk-u-Width-60" data-gver-panel-item>
     {% include './partials/leadform.MailingAddress.twig' %}
     {% include './partials/leadform.Zipcode.twig' %}
     {{ button.primary('Click to See Your Results!', formName, 'submit', 'full@xs') }}
