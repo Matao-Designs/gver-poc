@@ -1,19 +1,19 @@
-{% macro primary(label, name, type = 'button', widthAtSize, btnAttrs) %}
+{% macro primary(label, name, type = 'button', widthAtSize, btnAttrs, href) %}
   {% import _self as button %}
-  {{ button.build(label, name, type, widthAtSize, btnAttrs, 'primary') }}
+  {{ button.build(label, name, type, widthAtSize, btnAttrs, href, 'primary') }}
 {% endmacro %}
 
-{% macro secondary(label, name, type = 'button', widthAtSize, btnAttrs) %}
+{% macro secondary(label, name, type = 'button', widthAtSize, btnAttrs, href) %}
   {% import _self as button %}
-  {{ button.build(label, name, type, widthAtSize, btnAttrs, 'secondary') }}
+  {{ button.build(label, name, type, widthAtSize, btnAttrs, href, 'secondary') }}
 {% endmacro %}
 
-{% macro tertiary(label, name, type = 'button', widthAtSize, btnAttrs) %}
+{% macro tertiary(label, name, type = 'button', widthAtSize, btnAttrs, href) %}
   {% import _self as button %}
-  {{ button.build(label, name, type, widthAtSize, btnAttrs, 'tertiary') }}
+  {{ button.build(label, name, type, widthAtSize, btnAttrs, href, 'tertiary') }}
 {% endmacro %}
 
-{% macro build(label, name, type, widthAtSize, btnAttrs, variant) %}
+{% macro build(label, name, type, widthAtSize, btnAttrs, href = '', variant) %}
   {% set dataId = '' %}
   {% set btnClass = 'sprk-c-Button' %}
 
@@ -35,7 +35,13 @@
     {% set btnClass = btnClass ~ ' sprk-c-Button--' ~ widthAtSize %}
   {% endif %}
 
-  <button class="{{ btnClass }}" data-id="{{ dataId }}" type="{{ type }}" {{ btnAttrs }}>
-    {{ label }}
-  </button>
+  {% if href == '' %}
+    <button class="{{ btnClass }}" data-id="{{ dataId }}" type="{{ type }}" {{ btnAttrs }}>
+      {{ label }}
+    </button>
+  {% else %}
+    <a class="{{ btnClass }}" data-id="{{ dataId }}" href="{{ href }}" {{ btnAttrs }}>
+      {{ label }}
+    </a>
+  {% endif %}
 {% endmacro %}

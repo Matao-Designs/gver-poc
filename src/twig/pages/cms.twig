@@ -1,8 +1,15 @@
 {% extends "../layouts/primary.twig" %}
 
 {% block page %}
-<div class="sprk-o-Box sprk-o-Box--huge">
-  {{ cms.title.value }}
-  {{ cms.shortDescription.value }}
+<div class="sprk-o-Box--large sprk-o-CenteredColumn sprk-u-TextAlign--center sprk-u-Width-60">
+  <h2 class="sprk-b-TypeDisplayThree sprk-u-mbm">{{ cms.title.value }}</h2>
+
+  <div class="sprk-o-Box">
+    {{ cms.shortDescription.value }}
+  </div>
+
+  <div class="sprk-o-Box">
+    {{ button.primary('Get Started', 'rocket-mortgage', 'button', 'full@xs', null, 'http://rocketmortgage.com') }}
+  </div>
 </div>
 {% endblock page %}

@@ -23,7 +23,7 @@ gulp.task(
   });
 }, {
   options: {
-    'dontopen or -d': 'Tells browser-sync you don\'t want to open automatically.'
+    'dontopen or -d': ' Tells browser-sync you don\'t want to open automatically.'
   }
 }, {
   aliases: ['watch']

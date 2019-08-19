@@ -55,4 +55,8 @@ gulp.task('html', 'Compile HTML.', function () {
     }))
     .pipe(gulp.dest('build'))
     .pipe(browsersync.stream());
+}, {
+  options: {
+    'prod or -p': ' Optional flag to compile for Prod.'
+  }
 });
