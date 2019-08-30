@@ -35,23 +35,20 @@ Execute `gulp` or `gulp help`.
 
 # Must have for first live date:
 
-* Styling
-  * Update to latest version of Spark.
-  * QL and RM use different typefaces. The font stack should be configurable somehow (currently set in twig layout).
-  * Set up the real JDP image assets (and the assets for 100 best places, bbb, and EHO).
-* General
-  * Extract some of the stuff that every twig layout will need so that every new twig layout will have those things, because new layouts shouldn't mean new doctype, for example
 * Forms/submission
   * Validation needs some love.
   * Phone number-type fields may need to have formatting stripped before submission.
-* CMS integration
-  * How do content changes get deployed to nonprod/prod? It shouldn't be too hard - just need to trigger a deploy.
-    * [Webhooks?](https://www.netlify.com/docs/continuous-deployment/#build-environment-variables)
-  * How do we do QLS-triggered content and pre-build those pages?
-* LTC
-  * It must exist, and persist!
-* QLS
-  * It must exist, and persist!
+  * Phone number should disallow more than 10 characters (careful though, because Spark)
+  * Needs to submit to LOS.
+* Styling
+  * QL and RM use different typefaces. The font stack should be configurable somehow (currently set in twig layout).
+  * Set up the real JDP image assets (and the assets for 100 best places, bbb, and EHO).
+* Grover panels
+  * It doesn't need to be jQuery - and I'm sure we'll need to have this hook in to validation. It was just a quick and dirty implementation.
+* General
+  * Create layout partials. The common things shared amongst all layouts.
+  * LTC
+  * QLS
 * Macros
   * new: link.* (from Spark)
   * new: link.lockup
@@ -67,8 +64,10 @@ Execute `gulp` or `gulp help`.
   * new: svg.base - For basic inline svg asset needs.
   * new: gver.panels (still thinking about this as I prioritize work)
     * Allow the next/prev buttons/links to be omitted from a panel, if certain conditions are met (will be nice for auto-advancing wham-style radio-based icon panels).
-* Grover panels
-  * It doesn't need to be jQuery - and I'm sure we'll need to have this hook in to validation. It was just a quick and dirty implementation.
+* CMS biz
+  * How do content changes get deployed to nonprod/prod?
+    * [Webhooks?](https://www.netlify.com/docs/continuous-deployment/#build-environment-variables)
+  * How do we do parameter-triggered content and pre-build those pages?
 
 # Nice to have (some day):
 
