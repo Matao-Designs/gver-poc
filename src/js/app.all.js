@@ -1,4 +1,5 @@
-import sparkCore from '@sparkdesignsystem/spark-core/spark-core';
+import spark from '@sparkdesignsystem/spark/spark';
+import "@sparkdesignsystem/spark/es5/sparkPolyfills";
 import './app/gver.panels.js';
 
-sparkCore();
+spark();
